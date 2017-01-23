@@ -3,19 +3,17 @@
 #include <fstream>
 #include "readFile.h"
 
-using namespace std;
-
 void ReadFile::readFile()
 {
-    string line;
+    std::string line;
     //Created myFile object of class ifstream
-    ifstream myFile("example.txt");
+    std::ifstream myFile("example.txt");
     if (myFile.is_open())
     {
         //This while loop reads the file line by line using getline
-        while (getline(myFile, line))
+        while (std::getline(myFile, line))
         {
-            cout << line << '\n' << endl;
+            std::cout << line << '\n' << std::endl;
         }
 
         //Flushes the buffers and closes the file
@@ -23,6 +21,6 @@ void ReadFile::readFile()
     }
     else
     {
-        cout << "Unable to open file" << endl;
+        std::cout << "Unable to open file" << std::endl;
     }
 }

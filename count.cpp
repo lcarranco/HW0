@@ -9,25 +9,8 @@ using namespace std;
 
 int main (int argc, char * argv[2])
 {
-    string line;
-    //Created myFile object of class ifstream
-    ifstream myFile("example.txt");
-    if (myFile.is_open())
-    {
-        //This while loop reads the file line by line using getline
-        while (getline(myFile, line))
-        {
-            cout << line << '\n' << endl;
-        }
-
-        //Flushes the buffers and closes the file
-        myFile.close();
-    }
-    else
-    {
-        cout << "Unable to open file" << endl;
-    }
-
+    ReadFile a;
+    a.readFile();
 
     //Initialized vector
     vector<int> myVector;

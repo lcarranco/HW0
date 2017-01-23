@@ -3,6 +3,8 @@
 #include <fstream>
 #include "readFile.h"
 
+using namespace std;
+
 void ReadFile::readFile()
 {
     string line;

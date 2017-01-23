@@ -6,6 +6,8 @@
 #include "readFile.h"
 #include "ArgumentManager.h"
 
+bool is_number(const std::string& s);
+
 int main(int argc, char* argv[])
 {
   if (argc < 2) {

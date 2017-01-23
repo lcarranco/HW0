@@ -4,20 +4,31 @@
 #include <vector>
 #include <fstream>
 #include "readFile.h"
+#include "ArgumentManager.h"
 
-int main (int argc, char * argv[])
+int main(int argc, char* argv[])
 {
-    ReadFile a;
-    a.readFile();
-
-    //Initialized vector
-    std::vector<int> myVector;
-
-
-    int i;
-    char str[]="c.3po...";
-    i = 0;
-    while (std::isalnum(str[i])) i++;
-    std::printf ("The first %d characters are alphanumeric.\n", i);
-    return 0;
+  if (argc < 2) {
+    std::cerr << "Usage: count filename=input1.txt\n";
+  }
+  ArgumentManager am(argc, argv);
+  std::string filename = am.get("filename");
+  std::ifstream ifs(filename.c_str());
+  std::string line;
+  while (getline(ifs, line)){
+    // replace symbols by space for line.
+    // ...
+    std::stringstream ss(line.c_str());
+    std::string str;
+    while (ss >> str) {
+      if (is_number(str)) {
+	// ...
+      }
+      else {
+      // ...
+      }
+    }
+  }
+		
+  return 0;
 }

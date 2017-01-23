@@ -16,8 +16,8 @@ int main (int argc, char * argv[2])
 
     int i;
     char str[]="c.3po...";
-    i=0;
+    i = 0;
     while (std::isalnum(str[i])) i++;
-    std::printf ("The first %d characters are alphanumeric.\n",i);
+    std::printf ("The first %d characters are alphanumeric.\n", i);
     return 0;
 }

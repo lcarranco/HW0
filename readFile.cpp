@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <fstream>
+#include <string>
 #include "readFile.h"
 
 void ReadFile::readFile()

@@ -5,7 +5,7 @@
 #include <fstream>
 #include "readFile.h"
 
-int main (int argc, char * argv[2])
+int main (int argc, char * argv[])
 {
     ReadFile a;
     a.readFile();

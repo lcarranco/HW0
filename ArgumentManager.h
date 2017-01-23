@@ -1,3 +1,7 @@
+//Include guard
+#ifndef _argumentmanager_h_INCLUDED
+#define _argumentmanager_h_INCLUDED
+
 #include <map>
 #include <string>
 #include <iostream>
@@ -93,3 +97,5 @@ ostream& operator << (ostream &out, ArgumentManager &am) {
     out << am.toString();
     return out;
 }
+
+#endif // _argumentmanager_h_INCLUDED

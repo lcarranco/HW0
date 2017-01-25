@@ -1,0 +1,8 @@
+The main program should be . Call syntax is as follows (from the OS prompt):
+count filename=input.txt
+Notice that the file name will not necessarily be the same every time. Therefore, your program will have to take
+that into account.
+The output should be sent to the screen, as shown in the examples. Use only this format. Avoid introducing extra
+symbols or strings since your program will be graded automatically. For instance, avoid using phrases the output
+, the word count ).
+words=4 numbers=5

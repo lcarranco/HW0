@@ -15,6 +15,7 @@ int main(int argc, char* argv[])
   }
   ArgumentManager am(argc, argv);
   std::string filename = am.get("filename");
+  cout << filename << endl;
   std::ifstream ifs(filename.c_str());
   std::string line;
   while (getline(ifs, line)){

@@ -34,7 +34,7 @@ int main(int argc, char* argv[])
   std::string filename = am.get("filename");
   std::ifstream ifs(filename.c_str());
   std::string line;
-  int wordCount = 0, numberCount;
+  int wordCount = 0, numberCount = 0;
   char c = ' ';
   while (getline(ifs, line)){
     //replace symbols by space for line.
@@ -50,9 +50,17 @@ int main(int argc, char* argv[])
     std::stringstream ss(line.c_str());
     std::string str;
     while (ss >> str) {
-      cout << str << endl;
+      if (is_number(str))
+      {
+        numberCount++;
+      }
+      else
+      {
+        wordCount++;
+      }
     }
   }
+  cout << "words=" << wordCount << " numbers=" << numberCount << endl;
 		
   return 0;
 }

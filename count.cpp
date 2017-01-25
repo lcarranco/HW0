@@ -35,37 +35,24 @@ int main(int argc, char* argv[])
   std::ifstream ifs(filename.c_str());
   std::string line;
   int wordCount = 0, numberCount;
-  vector<string> wordVector;
+  char c = ' ';
   while (getline(ifs, line)){
     //replace symbols by space for line.
     //...
-    //Got the following code from http://stackoverflow.com/questions/7621727/split-a-string-into-words-by-multiple-delimiters
-    std::size_t prev = 0, pos;
-    while ((pos = line.find_first_of(" ';\n\\~`!@#$%^&*()-_+={}[]|:<,>.?/", prev)) != std::string::npos)
+    for (char &x : line)
     {
-        if (pos > prev)
-            wordVector.push_back(line.substr(prev, pos-prev));
-        prev = pos+1;
-    }
-    if (prev < line.length()) {
-        wordVector.push_back(line.substr(prev, std::string::npos));
-    }
-    //End of StackOverflow code
-    for(int i = 0; i < wordVector.size(); i++) {
-        cout << i << endl;
+      if (!isalnum(x))
+      {
+        x = ' ';
+        //cout << line << endl;
+      }
     }
     std::stringstream ss(line.c_str());
     std::string str;
     while (ss >> str) {
-      if (is_number(str)) {
-        numberCount++;
-      }
-      else {
-        wordCount++;
-      }
+      cout << str << endl;
     }
   }
-  cout << numberCount << endl;
 		
   return 0;
 }

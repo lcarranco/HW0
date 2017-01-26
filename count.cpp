@@ -33,6 +33,7 @@ int main(int argc, char* argv[])
     }
     std::stringstream ss(line.c_str());
     std::string str;
+    cout << startClock << endl;
     while (ss >> str) {
       if (is_number(str))
       {

@@ -3,7 +3,6 @@
 #include <cctype>
 #include <vector>
 #include <fstream>
-#include "readFile.h"
 #include "ArgumentManager.h"
 
 using namespace std;

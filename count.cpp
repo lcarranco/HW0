@@ -37,13 +37,11 @@ int main(int argc, char* argv[])
   char c = ' ';
   while (getline(ifs, line)){
     //replace symbols by space for line.
-    //...
-    for (char &x : line)
+    for (char &x : line) //Created a character x to traverse through the document line by line
     {
-      if (!isalnum(x))
+      if (!isalnum(x)) //The isalnum function checks each character in the document is either a decimal digit or an uppercase or lowercase letter. The function returns a value different from zero if it is indeed a digit or a letter. Function returns a zero otherwise. The if conditional is checking to see if the character is not a digit or letter then replace that character with a space.
       {
-        x = ' ';
-        //cout << line << endl;
+        x = ' '; //Replacing the character with a space.
       }
     }
     std::stringstream ss(line.c_str());

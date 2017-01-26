@@ -7,21 +7,6 @@
 
 using namespace std;
 
-//Copied from https://www.tutorialspoint.com/cplusplus/cpp_templates.htm
-template <class T>
-class Stack { 
-   private: 
-      vector<T> elems;     // elements 
-
-   public: 
-      void push(T const&);  // push element 
-      void pop();               // pop element 
-      T top() const;            // return top element 
-      bool empty() const{       // return true if empty.
-         return elems.empty(); 
-      } 
-};
-
 bool is_number(const std::string& s);
 
 int main(int argc, char* argv[])

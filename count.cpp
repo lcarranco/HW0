@@ -33,7 +33,6 @@ int main(int argc, char* argv[])
     }
     std::stringstream ss(line.c_str());
     std::string str;
-    cout << startClock << endl;
     while (ss >> str) {
       if (is_number(str))
       {
@@ -46,7 +45,7 @@ int main(int argc, char* argv[])
     }
   }
   startClock = clock() - startClock;
-  cout << startClock << endl;
+  cout << startClock << setprecision(10) << fixed << endl;
   cout << "words=" << wordCount << " numbers=" << numberCount << endl;
   return 0;
 }

@@ -3,6 +3,7 @@
 #include <cctype>
 #include <vector>
 #include <fstream>
+#include <iomanip>
 #include "ArgumentManager.h"
 
 using namespace std;

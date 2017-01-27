@@ -21,8 +21,8 @@ int main(int argc, char* argv[])
   std::string line;
   int wordCount = 0, numberCount = 0;
   char c = ' ';
-  clock_t startClock; //Initialized a variable of type clock
-  startClock = clock(); 
+  // clock_t startClock; //Initialized a variable of type clock
+  // startClock = clock(); 
   while (getline(ifs, line)){
     //replace symbols by space for line.
     for (char &x : line) //Created a character x to traverse through the document line by line
@@ -45,9 +45,9 @@ int main(int argc, char* argv[])
       }
     }
   }
-  startClock = clock() - startClock;
-  cout << startClock << setprecision(10) << fixed << endl;
-  cout << "words=" << wordCount << " numbers=" << numberCount << endl;
+  // startClock = clock() - startClock;
+  // cout << startClock << setprecision(10) << fixed << endl;
+  // cout << "words=" << wordCount << " numbers=" << numberCount << endl;
   return 0;
 }
 

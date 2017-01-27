@@ -47,7 +47,7 @@ int main(int argc, char* argv[])
   }
   // startClock = clock() - startClock;
   // cout << startClock << setprecision(10) << fixed << endl;
-  // cout << "words=" << wordCount << " numbers=" << numberCount << endl;
+  cout << "words=" << wordCount << " numbers=" << numberCount << endl;
   return 0;
 }
 
